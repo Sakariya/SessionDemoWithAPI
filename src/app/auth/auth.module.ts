@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { AuthService } from './auth.service';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -18,6 +19,9 @@ import { NgModule } from '@angular/core';
     ],
     exports: [
         LoginComponent
+    ],
+    providers: [
+        AuthService
     ]
 })
 export class AuthModule { }
