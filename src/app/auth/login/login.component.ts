@@ -25,8 +25,6 @@ export class LoginComponent implements OnInit {
             doLogin(this.email, this.password).
             subscribe(
                 (response) => {
-                    console.log('response ->> ', response);
-                    // this.token.saveToken(response['token']);
                     this.router.navigate(['./users']);
                 },
                 (errorResponse) => {
